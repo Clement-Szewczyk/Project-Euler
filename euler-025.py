@@ -24,4 +24,5 @@ def euleur25(maxi):
         i=i+1
     return i
 
+
 print(euleur25(1000))
