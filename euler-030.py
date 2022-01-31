@@ -4,14 +4,18 @@ Created on Sun Jan 30 15:20:18 2022
 
 @author: Clément Szewczyk
 """
-
-def som_digits_fifth_powers(nb):
-    sum = 0
-    for i in str(nb):
-        sum += int(i)**5
-    return sum
-resultat = 0
-for i in range(2, 354295):
-    if i == som_digits_fifth_powers(i):
-        resultat += i
-print(resultat)
+s=0
+vmax = 10
+for a in range(vmax):
+    for b in range(vmax):
+        for c in range(vmax):
+            for d in range(vmax):
+                for e in range(vmax):
+                    for f in range(vmax):
+                        for g in range(vmax):
+                            if (g**5+f**5+e**5+a**5+b**5+c**5+d**5 == g*1000000+f*100000+e*10000+a*1000+b*100+c*10+d):
+                                s=s + g*1000000+f*100000+e*10000+a*1000+b*100+c*10+d
+                                print ("%i%i%i%i%i%i%i" % (g,f,e,a,b,c,d))
+                                
+print(s)
+        
